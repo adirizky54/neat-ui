@@ -8,6 +8,18 @@
   "files": [
     "dist"
   ],
+  "author": {
+    "name": "Adi Rizky",
+    "email": "adirizky54@gmail.com",
+    "url": "https://github.com/adirizky54"
+  },
+  "bugs": {
+    "url": "https://github.com/adirizky54/neat-ui/issues"
+  },
+  "repository": {
+    "url": "https://github.com/adirizky54/neat-ui",
+    "type": "git"
+  },
   "scripts": {
     "build": "vite build",
     "build:lib": "rimraf dist && yarn build:lib:esm && yarn build:lib:cjs",
@@ -15,9 +27,10 @@
     "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir dist/esm",
     "build:storybook": "build-storybook",
     "dev": "vite",
-    "lint": "eslint --ext .ts,.tsx .",
+    "lint": "eslint src/lib --ext .ts,.tsx .",
     "preview": "vite preview",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "clsx": "^1.2.1"
